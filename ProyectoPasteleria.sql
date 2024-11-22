@@ -185,3 +185,13 @@ GO
 
 SELECT * FROM factura_detalle
 GO
+
+CREATE PROCEDURE ObtenerInscripciones
+AS
+BEGIN
+	SELECT
+	I.Inscripcion,
+	E.Nombre + '' + AS Estudiante,
+	C.NombreCurso AS Curso,
+	I.FechaInscripcion
+	FROM Inscripciones I
